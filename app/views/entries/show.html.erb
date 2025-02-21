@@ -1,0 +1,10 @@
+<!-- Entry Details Page -->
+
+<h1><%= @entry["city_name"] %>, <%= @entry["city_name"] %></h1>
+
+<ul>
+  <li><%= @entry["date"] %></li>
+  <li><%= @entry["description"] %></li>
+</ul>
+
+<p><a href="/place/<%= @entry["id"] %>">Back to <%= @place["city_name"] %></a></p>
