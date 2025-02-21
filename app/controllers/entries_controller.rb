@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find_by({"id" => params["id"]})
-    @place = Place.find_by({"id" => @centry["place_id"]})
+    @place = Place.find_by({"id" => @entry["place_id"]})
     # render entries/show view with details about Entry
   end
 
@@ -21,13 +21,13 @@ class EntriesController < ApplicationController
     @entry["description"] = params["description"]
 
     # assign relationship between Entry and Place
-    @entry["place_id"] = params["place_id]
+    @entry["place_id"] = params["place_id"]
 
     # save Entryrow
     @entry.save
 
     # redirect user
-    redirect_to "/places/place_id"
+    redirect_to "/places/#{@entry["place_id"]}"
   end
 
 end
