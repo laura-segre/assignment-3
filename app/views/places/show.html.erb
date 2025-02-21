@@ -4,8 +4,8 @@
 
 <ul>
   <% for entry in @entries %>
-    <p>
-        <%= entry["title"] %>
+    <p><strong>
+        <%= entry["title"] %></strong>
       </p>
     <p>
         <%= entry["occurred_on"] %>
@@ -13,7 +13,7 @@
     <p>
         <%= entry["description"] %>
 
-        
+
      </p>
   <% end %>
 </ul>
