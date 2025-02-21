@@ -6,11 +6,11 @@
 
 <ul>
   <% for entry in @entries %>
-    <li>
-      <a href="/entires/<%= entry["id"] %>">
-        <%= entry["occurred_on"] %>, <%= entry["description"] %>
-      </a>
-    </li>
+    <p>
+        <%= entry["title"] %>
+        <%= entry["occurred_on"] %>
+        <%= entry["description"] %>
+     </p>
   <% end %>
 </ul>
 

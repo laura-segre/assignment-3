@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get("/entries", {:controller => "entries", :action => "index"})
   get("entries/:new", :controller => "entries", :action => "new")
   get("/entries/:id", {:controller => "entries", :action => "show"})
+  post("/entries/create", :controller => "entries", :action => "create")
 
 end

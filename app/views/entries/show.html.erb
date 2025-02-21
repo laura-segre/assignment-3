@@ -1,10 +1,11 @@
 <!-- Entry Details Page -->
 
-<h1><%= @entry["city_name"] %>, <%= @entry["city_name"] %></h1>
+<h1><%= @entry["name"] %>, <%= @entry["name"] %></h1>
 
 <ul>
-  <li><%= @entry["date"] %></li>
+  <li><%= @entry["title"] %></li>
+  <li><%= @entry["occurred_on"] %></li>
   <li><%= @entry["description"] %></li>
 </ul>
 
-<p><a href="/place/<%= @entry["id"] %>">Back to <%= @place["city_name"] %></a></p>
+<p><a href="/place/<%= @entry["id"] %>">Back to <%= @place["name"] %></a></p>
