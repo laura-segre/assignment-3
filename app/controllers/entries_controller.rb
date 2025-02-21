@@ -16,12 +16,12 @@ class EntriesController < ApplicationController
     @entry = Entry.new
 
     # assign user-entered form data to Entry's columns
-    @entry["city_name"] = params["city_name"]
-    @entry["date"] = params["date"]
+    @entry["title"] = params["title"]
+    @entry["occurred_on"] = params["occurred_on"]
     @entry["description"] = params["description"]
 
     # assign relationship between Entry and Place
-    @entry["city_name"] = params["place_id]
+    @entry["place_id"] = params["place_id]
 
     # save Entryrow
     @entry.save

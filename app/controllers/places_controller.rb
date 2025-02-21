@@ -23,9 +23,8 @@ class PlacesController < ApplicationController
     @place = Place.new
 
     # assign user-entered form data to Places's columns
-    @place["city_name"] = params["city_name"]
-    @place["date"] = params["date"]
-    @place["description"] = params["description"]
+    @place["name"] = params["name"]
+  
 
     # save Place row
     @place.save
@@ -45,9 +44,8 @@ class PlacesController < ApplicationController
     @place = Place.find_by({ "id" => params["id"] })
 
     # assign user-entered form data to Places's columns
-    @place["city_name"] = params["city_name"]
-    @place["date"] = params["date"]
-    @place ["description"]= params["description"]
+    @place["name"] = params["name"]
+
 
     # save Place row
     @place.save
